@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo Mã QR Hình Trái Tim - Premium QR Generator</title>
+    <meta name="description" content="Công cụ tạo mã QR hình trái tim cực đẹp, scannable và tùy chỉnh màu sắc dễ dàng.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:ital,wght@0,700;1,700&family=Dancing+Script:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="background-container">
+        <div class="noise-overlay"></div>
+        <div class="liquid-mesh"></div>
+        <div class="background-blobs">
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
+            <div class="blob blob-3"></div>
+            <div class="blob blob-4"></div>
+        </div>
+    </div>
+    <div id="heart-particles" class="heart-particles"></div>
+
+    <main class="container">
+        <header class="header">
+            <h1 class="romantic-title">Mã QR <span class="gradient-text">Trái Tim</span></h1>
+            <p class="subtitle">Trao yêu thương qua từng nhịp chạm</p>
+        </header>
+
+        <section class="generator-card">
+            <div class="preview-section">
+                <div class="canvas-wrapper">
+                    <canvas id="qrCanvas"></canvas>
+                    <div id="loading" class="loader hidden"></div>
+                </div>
+                <div class="actions">
+                    <button id="downloadBtn" class="btn btn-secondary">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                        Tải Ảnh Xuống
+                    </button>
+                </div>
+            </div>
+
+            <div class="controls-section">
+                <div class="input-group">
+                    <label for="qrInput">Nhập URL hoặc lời nhắn</label>
+                    <input type="text" id="qrInput" placeholder="https://facebook.com/yourlink"
+                        value="https://love.you">
+                </div>
+
+                <div class="color-controls">
+                    <div class="control-item">
+                        <label>Màu QR (Gradient)</label>
+                        <div class="color-row">
+                            <div class="color-input-wrapper">
+                                <input type="color" id="colorFore" value="#ff3e60" title="Bắt đầu">
+                                <span id="foreHex" class="hex-label">#ff3e60</span>
+                            </div>
+                            <div class="color-input-wrapper">
+                                <input type="color" id="colorForeEnd" value="#ff7e5f" title="Kết thúc">
+                                <span id="foreEndHex" class="hex-label">#ff7e5f</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="control-item">
+                        <label for="colorBack">Màu Nền</label>
+                        <div class="color-input-wrapper">
+                            <input type="color" id="colorBack" value="#ffffff">
+                            <span id="backHex" class="hex-label">#ffffff</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="settings-group">
+                    <div class="control-item">
+                        <label for="dotSize">Độ Bo Tròn</label>
+                        <input type="range" id="dotSize" min="0" max="1" step="0.1" value="0">
+                    </div>
+                </div>
+
+                <div class="info-note">
+                    <p><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="16" x2="12" y2="12"></line>
+                            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                        </svg> QR hình trái tim sử dụng error correction mức độ cao (H) để đảm bảo quét được.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; TIENDEV MUỐN CUA ĐƯỢC EM</p>
+    </footer>
+
+    <!-- QR Code Library -->
+    <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
+    <script src="script1.js"></script>
+</body>
+
+</html>
