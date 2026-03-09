@@ -31,6 +31,12 @@ body {
     padding: 2rem;
 }
 
+@media (max-width: 600px) {
+    body {
+        padding: 1rem;
+    }
+}
+
 /* Background System */
 .background-container {
     position: fixed;
@@ -207,6 +213,16 @@ body {
     text-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
+@media (max-width: 600px) {
+    .header {
+        margin-bottom: 2rem;
+    }
+
+    .romantic-title {
+        font-size: 2.8rem;
+    }
+}
+
 .gradient-text {
     background: linear-gradient(135deg, var(--primary), var(--accent));
     -webkit-background-clip: text;
@@ -219,6 +235,12 @@ body {
     color: var(--text-muted);
     font-size: 2rem;
     font-weight: 400;
+}
+
+@media (max-width: 600px) {
+    .subtitle {
+        font-size: 1.4rem;
+    }
 }
 
 .generator-card {
@@ -240,8 +262,17 @@ body {
 @media (max-width: 850px) {
     .generator-card {
         grid-template-columns: 1fr;
-        padding: 2rem;
-        gap: 2rem;
+        padding: 2.5rem;
+        gap: 2.5rem;
+        border-radius: 2.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .generator-card {
+        padding: 1.5rem;
+        gap: 1.5rem;
+        border-radius: 2rem;
     }
 }
 
@@ -261,11 +292,20 @@ body {
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
     position: relative;
     width: 340px;
-    height: 340px;
+    max-width: 100%;
+    aspect-ratio: 1 / 1;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: transform 0.4s ease;
+}
+
+@media (max-width: 600px) {
+    .canvas-wrapper {
+        width: 100%;
+        padding: 1rem;
+    }
 }
 
 .canvas-wrapper:hover {
@@ -354,6 +394,12 @@ input[type="text"]:focus {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
+}
+
+@media (max-width: 400px) {
+    .color-row {
+        grid-template-columns: 1fr;
+    }
 }
 
 .color-input-wrapper {
